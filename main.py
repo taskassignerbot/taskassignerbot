@@ -8,7 +8,7 @@ logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s
                     level=logging.INFO)
 logger = logging.getLogger(__name__)
 
-TOKEN: Final='7122531475:AAGGJr5M9J8BSjapwxB6Rr6uTjmXH0R8UwQ'
+TOKEN: Final=get_telegram_api_key()
 
 employees = {
     "полина" : 642887648,
