@@ -5,10 +5,13 @@ from typing import Final
 import json
 from text_extractor import process_voice_file_and_get_text, paraphrase_message
 from functions import extract_name, define_adressee
+from api_keys import get_telegram_api_key
 
 logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
                     level=logging.INFO)
 logger = logging.getLogger(__name__)
+
+TOKEN = get_telegram_api_key()
 
 with open('employees.json', 'r') as json_file:
     employees = json.load(json_file)
